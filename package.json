@@ -1,0 +1,22 @@
+{
+  "name": "desafio-1-copa-para-practica",
+  "version": "1.0.0",
+  "description": "",
+  "main": "productManager.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js",
+    "test": "echo \"Error: no test specified\" &&  exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.1",
+    "express-handlebars": "^7.1.2",
+    "mongoose": "^8.3.2",
+    "socket.io": "^4.7.5",
+    "sweetalert2": "^11.10.8"
+  }
+}
