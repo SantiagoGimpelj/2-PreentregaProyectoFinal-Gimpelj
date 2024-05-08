@@ -1,5 +1,5 @@
 import { Router } from "express";
-import ProductManager from "../dao/ProductManagerMemory.js";
+// import ProductManager from "../dao/ProductManagerMemory.js";
 import { productoModelo } from "../dao/models/productsModelo.js";
 import ProductManagerMongo from "../dao/ProductManagerMongo.js";
 import CartManager from "../dao/CartManagerMongo.js";
@@ -30,11 +30,10 @@ router.get("/chat", (req, res) => {
 
 router.get('/products', async(req, res) => {
     const result = await productManager.getProducts(req, res);
-    return res.render('products', {title:'Productos', result, styles: 'products.css' })
+    return res.render('products', {title:'Productos', result,  styles: 'products.css' })
 })
 
 router.get('/cart/:cid', async (req, res) => {
-    // const {cid} = req.params;
     const carrito = await cartManager.getCartById(req, res)
     return res.render('cart', {title:'Carrito', carrito, styles:'carts.css'})
 })

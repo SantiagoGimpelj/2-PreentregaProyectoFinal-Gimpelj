@@ -80,8 +80,8 @@ export default class ProductManagerMongo {
         try {
             const { title, description, price, thumbnails, code, stock, category, status } = req.body;
 
-            if (!title, !description, !code, !price, !stock, !category) {
-                return res.status(404).json({ msg: 'Los campos [title, description, ccode, price, stock, category] son obligatorios' })
+            if (!title || !description || !code || !price || !stock || !category) {
+                return res.status(404).json({ msg: 'Los campos [title, description, code, price, stock, category] son obligatorios' })
             }
             const producto = await productoModelo.create({ title, description, price, thumbnails, code, stock, category, status });
 
