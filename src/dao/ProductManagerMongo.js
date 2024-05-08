@@ -43,7 +43,7 @@ export default class ProductManagerMongo {
                 totalDocs,
                 totalPage,
                 limit,
-                query:JSON.stringify(query),
+                query,
                 page,
                 hastNextPage,
                 hastPrevPage,
